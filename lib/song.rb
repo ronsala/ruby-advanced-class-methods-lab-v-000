@@ -62,7 +62,7 @@ class Song
       @@all_names << instance.name
     end
 
-    @@all_names.sort
+    sorted_names = @@all_names.sort_by { |a, b| a <=> b }
     @@all_names.each do |name|
       @@alpha << self.find_by_name(name)
     end
